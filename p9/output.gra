@@ -1,0 +1,35 @@
+3
+a
+b
+c
+9
+S
+X
+Y
+Ca
+Cb
+D000
+D001
+D010
+D020
+S
+19
+S -> CaD000
+S -> CaD010
+S -> CaD020
+S -> CaCb
+X -> CaY
+X -> CbY
+X -> a
+X -> b
+Y -> CaY
+Y -> CbY
+Y -> a
+Y -> b
+Y -> c
+Ca -> a
+Cb -> b
+D000 -> XD001
+D001 -> CbX
+D010 -> CbX
+D020 -> XCb

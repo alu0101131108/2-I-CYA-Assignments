@@ -1,0 +1,16 @@
+while
+SIG (
+PAL x
+OP <
+INT 5
+SIG )
+SIG {
+PAL hola
+PAL mundo
+PAL cruel
+PAL i
+PAL f
+PAL Computabilidad
+PAL Algoritmia
+FLOT 3.1416
+SIG }

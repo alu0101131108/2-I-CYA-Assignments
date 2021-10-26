@@ -1,0 +1,4 @@
+(a|b)*xz*           ab|*x&z*&           &&*|abx*z           9
+a|b                 ab|                 |ab                 3
+a|bc                abc&|               |a&bc               5
+(a|b)(c|d)          ab|cd|&             &|ab|cd             7

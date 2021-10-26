@@ -1,0 +1,42 @@
+/* Comprueba el funcionamiento de la clase Function.
+#include "DFA.cpp"
+
+int main()
+{
+  set<string> xside, yside;
+  xside.insert("A");
+  xside.insert("B");
+  xside.insert("C");
+  xside.insert("D");
+  yside.insert("1");
+  yside.insert("2");
+  yside.insert("3");
+  yside.insert("4");
+
+  Function funcion;
+  funcion.initializeEmpty(xside, yside);
+  funcion.print(cout);
+  funcion.define("B", "2", "C");
+  funcion.define("D", "4", "F");
+  funcion.print(cout);
+
+  return 0;
+}
+*/
+
+/* Comprueba el funcionamiento de la lectura de un .dfa y la impresión de la misma.
+#include "DFA.cpp"
+
+int main(int argc, char** argv)
+{
+  ifstream in;
+  in.open(argv[1]);
+  DFA dfa1;
+  dfa1.readFromFile(in);
+  in.close();
+
+  dfa1.displayInfo(cout);
+
+  return 0;
+}
+*/

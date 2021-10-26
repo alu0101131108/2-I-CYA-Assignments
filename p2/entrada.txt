@@ -1,0 +1,5 @@
+while ( x < 5 ) {
+hola mundo cruel
+i f Computabilidad Algoritmia
+3.1416
+}

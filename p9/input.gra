@@ -1,0 +1,34 @@
+// Universidad de La Laguna
+// Grado en Ingenieria Informatica
+// Computabilidad y Algoritmia
+// Fichero de representacion de la Gramatica:
+//
+//            S -> aXbX | abX | aXb | ab
+//            X -> aY | bY | a | b
+//            Y -> aY | bY | a | b | c
+//
+//
+////////////////////////////////////////////
+3
+a
+b
+c
+3
+S
+X
+Y
+S
+13
+S -> aXbX
+S -> abX
+S -> aXb
+S -> ab
+X -> aY
+X -> bY
+X -> a
+X -> b
+Y -> aY
+Y -> bY
+Y -> a
+Y -> b
+Y -> c

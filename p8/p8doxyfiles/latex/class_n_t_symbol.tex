@@ -1,0 +1,64 @@
+\hypertarget{class_n_t_symbol}{}\doxysection{N\+T\+Symbol Class Reference}
+\label{class_n_t_symbol}\index{NTSymbol@{NTSymbol}}
+
+
+{\ttfamily \#include $<$N\+T\+Symbol.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_n_t_symbol_a62962c60210982da517b96564ef0bd87}\label{class_n_t_symbol_a62962c60210982da517b96564ef0bd87}} 
+{\bfseries N\+T\+Symbol} (string name)
+\item 
+string \mbox{\hyperlink{class_n_t_symbol_a1032d9795039b9b3001705527718f7e6}{get\+Id}} ()
+\item 
+void \mbox{\hyperlink{class_n_t_symbol_a74910f4029240a08eb4dd85e6286c033}{set\+Id}} (string name)
+\item 
+vector$<$ production $>$ \mbox{\hyperlink{class_n_t_symbol_a67a7797d237c5ba1aa785988d4ffffd9}{get\+Productions}} ()
+\item 
+void \mbox{\hyperlink{class_n_t_symbol_a32643469c80872c9ca1fe5aaa256a592}{define\+Production}} (vector$<$ string $>$ in\+\_\+symbols, string final\+\_\+nts\+ID)
+\item 
+void \mbox{\hyperlink{class_n_t_symbol_a5efb4d18e80a9b557438b637d1d51d4d}{print}} (ostream \&os)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Servirá para representar los símbolos no terminales de una gramática. Contendrá un identificador de tipo string y un vector de producciones. Las producciones son pares tipo $<$vector$<$string$>$, string$>$, donde al recibir cualquier simbolo terminal que forme parte del primer elemento, se producirá un salto al símbolo no terminal cuyo identificador está en el segundo elemento del par. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_n_t_symbol_a32643469c80872c9ca1fe5aaa256a592}\label{class_n_t_symbol_a32643469c80872c9ca1fe5aaa256a592}} 
+\index{NTSymbol@{NTSymbol}!defineProduction@{defineProduction}}
+\index{defineProduction@{defineProduction}!NTSymbol@{NTSymbol}}
+\doxysubsubsection{\texorpdfstring{defineProduction()}{defineProduction()}}
+{\footnotesize\ttfamily void N\+T\+Symbol\+::define\+Production (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{in\+\_\+symbols,  }\item[{string}]{final\+\_\+nts\+ID = {\ttfamily \char`\"{}\$\char`\"{}} }\end{DoxyParamCaption})}
+
+Añade una producción al vector de producciones asociadas al símbolo no terminal. \mbox{\Hypertarget{class_n_t_symbol_a1032d9795039b9b3001705527718f7e6}\label{class_n_t_symbol_a1032d9795039b9b3001705527718f7e6}} 
+\index{NTSymbol@{NTSymbol}!getId@{getId}}
+\index{getId@{getId}!NTSymbol@{NTSymbol}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily string N\+T\+Symbol\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Devuelve el identificador del símbolo no terminal. \mbox{\Hypertarget{class_n_t_symbol_a67a7797d237c5ba1aa785988d4ffffd9}\label{class_n_t_symbol_a67a7797d237c5ba1aa785988d4ffffd9}} 
+\index{NTSymbol@{NTSymbol}!getProductions@{getProductions}}
+\index{getProductions@{getProductions}!NTSymbol@{NTSymbol}}
+\doxysubsubsection{\texorpdfstring{getProductions()}{getProductions()}}
+{\footnotesize\ttfamily vector$<$ production $>$ N\+T\+Symbol\+::get\+Productions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Devuelve el vector de producciones. \mbox{\Hypertarget{class_n_t_symbol_a5efb4d18e80a9b557438b637d1d51d4d}\label{class_n_t_symbol_a5efb4d18e80a9b557438b637d1d51d4d}} 
+\index{NTSymbol@{NTSymbol}!print@{print}}
+\index{print@{print}!NTSymbol@{NTSymbol}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void N\+T\+Symbol\+::print (\begin{DoxyParamCaption}\item[{ostream \&}]{os }\end{DoxyParamCaption})}
+
+Muestra la información asociada al símbolo no terminal por consola. \mbox{\Hypertarget{class_n_t_symbol_a74910f4029240a08eb4dd85e6286c033}\label{class_n_t_symbol_a74910f4029240a08eb4dd85e6286c033}} 
+\index{NTSymbol@{NTSymbol}!setId@{setId}}
+\index{setId@{setId}!NTSymbol@{NTSymbol}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void N\+T\+Symbol\+::set\+Id (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Establece el identificador al string pasado por parámetro. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/cpp/\+C\+Y\+A/p8/N\+T\+Symbol.\+hpp\item 
+C\+:/cpp/\+C\+Y\+A/p8/N\+T\+Symbol.\+cpp\end{DoxyCompactItemize}

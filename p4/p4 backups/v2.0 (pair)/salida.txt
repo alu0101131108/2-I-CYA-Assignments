@@ -1,0 +1,10 @@
+int c = 0;                                    
+while(aux)
+{
+  if(z == 2                     )
+  {
+    c++;
+  }                       
+}                                   
+yeyo gente.
+

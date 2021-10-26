@@ -1,0 +1,56 @@
+\hypertarget{class_state}{}\doxysection{State Class Reference}
+\label{class_state}\index{State@{State}}
+
+
+{\ttfamily \#include $<$State.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_state_a692f6326c8ce3745429e30deb535e708}\label{class_state_a692f6326c8ce3745429e30deb535e708}} 
+{\bfseries State} (string name)
+\item 
+vector$<$ transition $>$ \mbox{\hyperlink{class_state_a27e8b58b9202419091e5b8002d124b7f}{get\+Transitions}} ()
+\item 
+string \mbox{\hyperlink{class_state_a58554341b7dd5d91f45b571331bb740c}{get\+Id}} ()
+\item 
+void \mbox{\hyperlink{class_state_afdbc2deaded9f874a46a6a4d43f8627e}{add\+Transition}} (string in\+\_\+symbol, string next\+\_\+state)
+\item 
+void \mbox{\hyperlink{class_state_af9886adddc4caf2fdd8e3fb4020a073d}{print}} (ostream \&os)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Servirá para representar los estados de un N\+FA. Contendrá un identificador de tipo string y un vector de transiciones. Las transiciones son pares tipo $<$string, string$>$, donde el segundo elemento representa el identificador del estado al que transita el N\+FA al recibir el simbolo almacenado en el primer elemento. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_state_afdbc2deaded9f874a46a6a4d43f8627e}\label{class_state_afdbc2deaded9f874a46a6a4d43f8627e}} 
+\index{State@{State}!addTransition@{addTransition}}
+\index{addTransition@{addTransition}!State@{State}}
+\doxysubsubsection{\texorpdfstring{addTransition()}{addTransition()}}
+{\footnotesize\ttfamily void State\+::add\+Transition (\begin{DoxyParamCaption}\item[{string}]{in\+\_\+symbol,  }\item[{string}]{next\+\_\+state }\end{DoxyParamCaption})}
+
+Añade una transición al estado. Se crea el par$<$string, string$>$ con el símbolo de entrada y con el identificador del estado al que transita. Una vez creado, se añade al vector de transiciones asociadas al estado. \mbox{\Hypertarget{class_state_a58554341b7dd5d91f45b571331bb740c}\label{class_state_a58554341b7dd5d91f45b571331bb740c}} 
+\index{State@{State}!getId@{getId}}
+\index{getId@{getId}!State@{State}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily string State\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Devuelve el identificador asociado al estado. \mbox{\Hypertarget{class_state_a27e8b58b9202419091e5b8002d124b7f}\label{class_state_a27e8b58b9202419091e5b8002d124b7f}} 
+\index{State@{State}!getTransitions@{getTransitions}}
+\index{getTransitions@{getTransitions}!State@{State}}
+\doxysubsubsection{\texorpdfstring{getTransitions()}{getTransitions()}}
+{\footnotesize\ttfamily vector$<$ transition $>$ State\+::get\+Transitions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Devuelve el vector de transiciones asociadas al estado. \mbox{\Hypertarget{class_state_af9886adddc4caf2fdd8e3fb4020a073d}\label{class_state_af9886adddc4caf2fdd8e3fb4020a073d}} 
+\index{State@{State}!print@{print}}
+\index{print@{print}!State@{State}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void State\+::print (\begin{DoxyParamCaption}\item[{ostream \&}]{os }\end{DoxyParamCaption})}
+
+Permite visualizar por consola la información del estado. Se mostrará el identificador seguido de todas sus transiciones de la forma simbolo\+\_\+entrada -\/$>$ estado\+\_\+final. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/cpp/\+C\+Y\+A/p8/State.\+hpp\item 
+C\+:/cpp/\+C\+Y\+A/p8/State.\+cpp\end{DoxyCompactItemize}

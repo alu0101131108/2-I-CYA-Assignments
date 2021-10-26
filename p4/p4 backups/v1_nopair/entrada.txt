@@ -1,0 +1,11 @@
+int c = 0;          // Establezco c igual a 0.
+while(aux)
+{
+  if(z == 2/*si z es igual a 2*/)
+  {
+    c++;
+  } // Cierro llave. // aa
+}  /*
+this is a normal comentary.
+*/
+yeyo gente.

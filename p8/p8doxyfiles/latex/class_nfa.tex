@@ -1,0 +1,98 @@
+\hypertarget{class_nfa}{}\doxysection{Nfa Class Reference}
+\label{class_nfa}\index{Nfa@{Nfa}}
+
+
+{\ttfamily \#include $<$Nfa.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_nfa_a944d184b70647fe14ccd9bd0de868472}{get\+State\+Index}} (string id)
+\item 
+void \mbox{\hyperlink{class_nfa_a0cd22fafd190c0de32f3abaf7253d3cf}{set\+Init\+State\+Id}} (string id)
+\item 
+void \mbox{\hyperlink{class_nfa_aa1bddc362241393b8dd7debe369e9a75}{set\+Alphabet}} (set$<$ string $>$ in\+\_\+alphabet)
+\item 
+void \mbox{\hyperlink{class_nfa_a30eaff847a61ba99ead78cd9f35da9a1}{set\+Void\+Label}} (string label)
+\item 
+void \mbox{\hyperlink{class_nfa_a2e31b8201db416c683c63335c0feb525}{add\+New\+State}} (string id)
+\item 
+void \mbox{\hyperlink{class_nfa_a0608921308b85a624ac4cd6c07a357b3}{add\+States}} (vector$<$ \mbox{\hyperlink{class_state}{State}} $>$ input\+\_\+states)
+\item 
+void \mbox{\hyperlink{class_nfa_a392e8ee87b768fde59938a85d976522d}{add\+Final\+State}} (string id)
+\item 
+void \mbox{\hyperlink{class_nfa_ab116577950b8b34622b9e177a1adbe8a}{print}} (ostream \&os)
+\item 
+void \mbox{\hyperlink{class_nfa_a43e609434147ccfe71b80d4864d67514}{export\+To\+File}} (string filename)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Servirá para representar un autómata finito no determinista (N\+FA). Un N\+FA M puede representarse a través de la tupla M ≡ (Q, Σ, δ, q0, F). Donde Q es el conjunto de estados, Σ es el alfabeto, δ es la función de transición, q0 es el estado inicial y F es el conjunto de estados finales. En este caso los N\+F\+As tendrán un alfabeto, un conjunto de estados, un estado inicial y un conjunto de estados finales. La función de transición se reparte entre todos los estados, dado que cada uno almacena sus propias transiciones. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_nfa_a392e8ee87b768fde59938a85d976522d}\label{class_nfa_a392e8ee87b768fde59938a85d976522d}} 
+\index{Nfa@{Nfa}!addFinalState@{addFinalState}}
+\index{addFinalState@{addFinalState}!Nfa@{Nfa}}
+\doxysubsubsection{\texorpdfstring{addFinalState()}{addFinalState()}}
+{\footnotesize\ttfamily void Nfa\+::add\+Final\+State (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+
+Incluye el estado pasado por parámetro en el conjunto de estados finales \mbox{\Hypertarget{class_nfa_a2e31b8201db416c683c63335c0feb525}\label{class_nfa_a2e31b8201db416c683c63335c0feb525}} 
+\index{Nfa@{Nfa}!addNewState@{addNewState}}
+\index{addNewState@{addNewState}!Nfa@{Nfa}}
+\doxysubsubsection{\texorpdfstring{addNewState()}{addNewState()}}
+{\footnotesize\ttfamily void Nfa\+::add\+New\+State (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+
+Añade un nuevo estado al vector de estados. \mbox{\Hypertarget{class_nfa_a0608921308b85a624ac4cd6c07a357b3}\label{class_nfa_a0608921308b85a624ac4cd6c07a357b3}} 
+\index{Nfa@{Nfa}!addStates@{addStates}}
+\index{addStates@{addStates}!Nfa@{Nfa}}
+\doxysubsubsection{\texorpdfstring{addStates()}{addStates()}}
+{\footnotesize\ttfamily void Nfa\+::add\+States (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_state}{State}} $>$}]{input\+\_\+states }\end{DoxyParamCaption})}
+
+Establece el vector de estados al pasado por parámetro. \mbox{\Hypertarget{class_nfa_a43e609434147ccfe71b80d4864d67514}\label{class_nfa_a43e609434147ccfe71b80d4864d67514}} 
+\index{Nfa@{Nfa}!exportToFile@{exportToFile}}
+\index{exportToFile@{exportToFile}!Nfa@{Nfa}}
+\doxysubsubsection{\texorpdfstring{exportToFile()}{exportToFile()}}
+{\footnotesize\ttfamily void Nfa\+::export\+To\+File (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+Genera una especificación del N\+FA y la guarda en el archivo cuyo nombre se pasa por parámetro. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & nombre del archivo. La especificación sigue el formato propuesto en el pdf de la práctica 8. Se recomienda que el archivo tenga extensión \textquotesingle{}.nfa\textquotesingle{}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_nfa_a944d184b70647fe14ccd9bd0de868472}\label{class_nfa_a944d184b70647fe14ccd9bd0de868472}} 
+\index{Nfa@{Nfa}!getStateIndex@{getStateIndex}}
+\index{getStateIndex@{getStateIndex}!Nfa@{Nfa}}
+\doxysubsubsection{\texorpdfstring{getStateIndex()}{getStateIndex()}}
+{\footnotesize\ttfamily int Nfa\+::get\+State\+Index (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+
+Devuelve el índice en el vector de estados que tiene el estado cuyo identificador coincide con el string pasado por parámetro. \mbox{\Hypertarget{class_nfa_ab116577950b8b34622b9e177a1adbe8a}\label{class_nfa_ab116577950b8b34622b9e177a1adbe8a}} 
+\index{Nfa@{Nfa}!print@{print}}
+\index{print@{print}!Nfa@{Nfa}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Nfa\+::print (\begin{DoxyParamCaption}\item[{ostream \&}]{os }\end{DoxyParamCaption})}
+
+Muestra la información relacionada con el N\+FA por consola \mbox{\Hypertarget{class_nfa_aa1bddc362241393b8dd7debe369e9a75}\label{class_nfa_aa1bddc362241393b8dd7debe369e9a75}} 
+\index{Nfa@{Nfa}!setAlphabet@{setAlphabet}}
+\index{setAlphabet@{setAlphabet}!Nfa@{Nfa}}
+\doxysubsubsection{\texorpdfstring{setAlphabet()}{setAlphabet()}}
+{\footnotesize\ttfamily void Nfa\+::set\+Alphabet (\begin{DoxyParamCaption}\item[{set$<$ string $>$}]{in\+\_\+alphabet }\end{DoxyParamCaption})}
+
+Establece el alfabeto al pasado por parámetro \mbox{\Hypertarget{class_nfa_a0cd22fafd190c0de32f3abaf7253d3cf}\label{class_nfa_a0cd22fafd190c0de32f3abaf7253d3cf}} 
+\index{Nfa@{Nfa}!setInitStateId@{setInitStateId}}
+\index{setInitStateId@{setInitStateId}!Nfa@{Nfa}}
+\doxysubsubsection{\texorpdfstring{setInitStateId()}{setInitStateId()}}
+{\footnotesize\ttfamily void Nfa\+::set\+Init\+State\+Id (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+
+Establece el estado inicial al pasado por parámetro. \mbox{\Hypertarget{class_nfa_a30eaff847a61ba99ead78cd9f35da9a1}\label{class_nfa_a30eaff847a61ba99ead78cd9f35da9a1}} 
+\index{Nfa@{Nfa}!setVoidLabel@{setVoidLabel}}
+\index{setVoidLabel@{setVoidLabel}!Nfa@{Nfa}}
+\doxysubsubsection{\texorpdfstring{setVoidLabel()}{setVoidLabel()}}
+{\footnotesize\ttfamily void Nfa\+::set\+Void\+Label (\begin{DoxyParamCaption}\item[{string}]{label }\end{DoxyParamCaption})}
+
+Establece la etiqueta para una ε-\/transicion a la pasada por parámetro. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/cpp/\+C\+Y\+A/p8/Nfa.\+hpp\item 
+C\+:/cpp/\+C\+Y\+A/p8/Nfa.\+cpp\end{DoxyCompactItemize}

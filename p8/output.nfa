@@ -1,0 +1,26 @@
+4
+~
++
+-
+0
+1
+5
+S
+A
+B
+aux220
+aux230
+S
+2
+aux220
+aux230
+S 0 A
+S 1 A
+A 0 A
+A 1 A
+A + B
+A - B
+B 0 B
+B 1 B
+B 0 aux220
+B 1 aux230

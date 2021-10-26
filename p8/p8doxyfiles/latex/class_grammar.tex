@@ -1,0 +1,66 @@
+\hypertarget{class_grammar}{}\doxysection{Grammar Class Reference}
+\label{class_grammar}\index{Grammar@{Grammar}}
+
+
+{\ttfamily \#include $<$Grammar.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_grammar_ac65ab13024f3444b6bf3008bb4a79e10}{Grammar}} (string filename)
+\item 
+\mbox{\hyperlink{class_nfa}{Nfa}} \mbox{\hyperlink{class_grammar_ab3fe301cd8202db13aabc7092266782a}{convert\+To\+N\+FA}} ()
+\item 
+void \mbox{\hyperlink{class_grammar_aa976656e02a1ae93d1bdea49690c0b3c}{import\+From\+File}} (string filename)
+\item 
+void \mbox{\hyperlink{class_grammar_a989bc5e5d4597cfe113426bc476f42d7}{print}} (ostream \&os)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Servirá para representar Gramáticas. Una Gramática G puede representarse de la forma G ≡ (V, Σ, S, P). Donde V es el conjunto de símbolos no terminales, Σ es el conjunto de símbolos terminales, S es el símbolo de arranque y P es el conjunto de producciones. Esta clase contendrá los tres primeros elementos de la tupla como atributos y el conjunto de producciones será almacenado por los mismos símbolos no terminales, donde cada uno almacenará las producciones asociadas a sí mismo. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_grammar_ac65ab13024f3444b6bf3008bb4a79e10}\label{class_grammar_ac65ab13024f3444b6bf3008bb4a79e10}} 
+\index{Grammar@{Grammar}!Grammar@{Grammar}}
+\index{Grammar@{Grammar}!Grammar@{Grammar}}
+\doxysubsubsection{\texorpdfstring{Grammar()}{Grammar()}}
+{\footnotesize\ttfamily Grammar\+::\+Grammar (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Constructor apartir de un archivo de texto donde figura la especificación de una gramática. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_grammar_ab3fe301cd8202db13aabc7092266782a}\label{class_grammar_ab3fe301cd8202db13aabc7092266782a}} 
+\index{Grammar@{Grammar}!convertToNFA@{convertToNFA}}
+\index{convertToNFA@{convertToNFA}!Grammar@{Grammar}}
+\doxysubsubsection{\texorpdfstring{convertToNFA()}{convertToNFA()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_nfa}{Nfa}} Grammar\+::convert\+To\+N\+FA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Construye un N\+FA M apartir de la gramática invocante donde L(\+M) = L(gramatica invocante). El algoritmo de construcción del N\+FA sigue los siguientes pasos\+:
+\begin{DoxyItemize}
+\item El alfabeto será equivalente al conjunto de simbolos terminales.
+\item El estado inicial será equivalente al simbolo no terminal de arranque. Se inicia creando tantos estados como símbolos no temrinales tenga la gramática. A continuación, se analizará cada una de las producciones de cada símbolo no terminal.
+\item Por cada produccion se crearán una serie de estados nuevos auxiliares. Si en la producción solo hay símbolos terminales, se crearán n estados auxiliares donde n es el numero de simbolos terminales de la producción. Las transiciones irán desde el estado asociado al simbolo inicial de la producción hasta el primer estado auxiliar, con el primer simbolo terminal de la producción. Al último estado de esta serie de estados auxiliares se transitará con el último símbolo terminal de la producción, y este estado será incluido a los estados de aceptación. Si en la producción hay un simbolo terminal y un no terminal, no se crearán estados auxiliares. Se añadirá la transición desde el estado asociado al simbolo no terminal inicial al estado asociado al simbolo no terminal final, al recibir el símbolo terminal de la producción. Si en la producción hay una cadena de simbolos terminales seguidos de un simbolo no terminal, se crearán n-\/1 estados auxiliares, donde n es el número de simbolos terminales en la producción. El proceso será parecido al primer caso con la diferencia de que la última transición apuntará al estado asociado al simbolo no terminal final de la producción y este no será de aceptación. 
+\end{DoxyItemize}\mbox{\Hypertarget{class_grammar_aa976656e02a1ae93d1bdea49690c0b3c}\label{class_grammar_aa976656e02a1ae93d1bdea49690c0b3c}} 
+\index{Grammar@{Grammar}!importFromFile@{importFromFile}}
+\index{importFromFile@{importFromFile}!Grammar@{Grammar}}
+\doxysubsubsection{\texorpdfstring{importFromFile()}{importFromFile()}}
+{\footnotesize\ttfamily void Grammar\+::import\+From\+File (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+Da valor a los atributos apartir del archivo de nombre filename donde figura la especificación de una gramática. \mbox{\Hypertarget{class_grammar_a989bc5e5d4597cfe113426bc476f42d7}\label{class_grammar_a989bc5e5d4597cfe113426bc476f42d7}} 
+\index{Grammar@{Grammar}!print@{print}}
+\index{print@{print}!Grammar@{Grammar}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Grammar\+::print (\begin{DoxyParamCaption}\item[{ostream \&}]{os }\end{DoxyParamCaption})}
+
+Muestra por consola la información relacionada con la gramática 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/cpp/\+C\+Y\+A/p8/Grammar.\+hpp\item 
+C\+:/cpp/\+C\+Y\+A/p8/Grammar.\+cpp\end{DoxyCompactItemize}
